@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Testing as a Borrower">
+
+	<parameter name="loanAmount" value="2000"/>
+	<parameter name="loanPurpose" value="Pay off Credit Cards"/>
+	<parameter name="userIncome" value="100000"/>
+	<parameter name="userAdditionalIncome" value="5000"/>
+
+	<test name="Check your rate and store the information that Upgrade returns. Login with the created user">
+		<classes>
+			<class name="tests.BorrowerTests">
+				<methods>
+					<include name="checkYourRate"/>
+					<include name="login"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
